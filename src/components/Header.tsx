@@ -1,14 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import NavLinks from "./NavLinks";
+import { date } from "@/lib/utils";
 
 const Header = () => {
-  const date = new Date().toLocaleDateString("bn-Bd", {
-    dateStyle: "full",
-  });
-  console.log(date);
+
   return (
-    <header className="my-3 border-b border-slate-200">
+    <header className="border-b border-slate-200">
+
+      {/* Upper section (logo, Signing) */}
       <section className="py-3 border-b border-slate-100">
         <div className="max-w-7xl mx-auto flex justify-between px-4">
           <div className="flex gap-2">
@@ -43,7 +43,9 @@ const Header = () => {
           </div>
         </div>
       </section>
-      <section className="py-3">
+
+      {/* Navlinks (Category) */}
+      <section className="py-1">
         <NavLinks></NavLinks>
       </section>
     </header>
