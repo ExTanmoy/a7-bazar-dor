@@ -26,15 +26,15 @@ const Hero = () => {
 
             {/* Call to Action Button */}
             <div className="pt-2">
-              <button className="bg-[#05893e] hover:bg-[#00522c] text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200">
+              <a href = "#all-products" className="bg-[#05893e] hover:bg-[#00522c] text-white font-medium py-3 px-6 rounded-lg transition-all duration-200">
                 সব পণ্য দেখুন
-              </button>
+              </a>
             </div>
             
           </div>
 
           {/* Right Image Section */}
-          <div className="flex-shrink-0 w-64 md:w-80 lg:w-90">
+          <div className="shrink-0 w-64 md:w-80 lg:w-90">
             
             <Image 
               src="/bazar-hero 1.svg" 

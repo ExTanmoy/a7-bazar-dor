@@ -10,7 +10,7 @@ const NavLinks = async() => {
                 categories.map((category:Category) =>  
                     <Link 
                         key={category.id} 
-                        href={`category/${category.slug}`} 
+                        href={`/category/${category.slug}`} 
                         className="flex gap-1.5 text-sm font-bold rounded-xl px-4 py-2 hover:bg-mauve-200 hover:scale-105 transition-all duration-200">
                             <span>{category.icon}</span>
                             <span>{category.nameBn}</span>

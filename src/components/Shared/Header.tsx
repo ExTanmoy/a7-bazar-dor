@@ -4,27 +4,27 @@ import NavLinks from "./NavLinks";
 import { date } from "@/lib/utils";
 
 const Header = () => {
-
   return (
     <header className="border-b border-slate-200">
-
       {/* Upper section (logo, Signing) */}
       <section className="py-3 border-b border-slate-100">
         <div className="max-w-7xl mx-auto flex justify-between px-4">
-          <div className="flex gap-2">
-            <span className="flex justify-center items-center bg-[#05893e] rounded-xl size-11">
-              <Image
-                height={25}
-                width={25}
-                src={"/logo.svg"}
-                alt="logo"
-              ></Image>
-            </span>
-            <div>
-              <h2 className="text-xl font-bold">বাজার দর</h2>
-              <p className=" text-xs text-slate-500">{date}</p>
+          <Link href={"/"}>
+            <div className="flex gap-2">
+              <span className="flex justify-center items-center bg-[#05893e] rounded-xl size-11">
+                <Image
+                  height={25}
+                  width={25}
+                  src={"/logo.svg"}
+                  alt="logo"
+                ></Image>
+              </span>
+              <div>
+                <h2 className="text-xl font-bold">বাজার দর</h2>
+                <p className=" text-xs text-slate-500">{date}</p>
+              </div>
             </div>
-          </div>
+          </Link>
 
           <div className="flex items-center gap-2 font-sans">
             <a

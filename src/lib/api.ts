@@ -9,7 +9,7 @@ export const getCategories = async() => {
     return res.json();
 }
 
-// fetching products
+// 2. fetching products
 export const getProducts = async() => {
     const res = await fetch(`${Base_URL}/products`, {
         next: { revalidate: 60}
@@ -18,4 +18,28 @@ export const getProducts = async() => {
         throw new Error('Products fetch করতে সমস্যা হয়েছে');
     }
     return res.json();
+}
+
+// 3. fetch particular category by slug
+export const getCategoryBySlug = async (slug: string) => {
+  const res = await fetch(`${Base_URL}/categories/${slug}`);
+
+  if (!res.ok) {
+    throw new Error("Category fetch করতে সমস্যা হয়েছে");
+  }
+
+  return res.json();
+}
+
+// 4
+export const getProductsByCategory = async (slug: string) => {
+  const res = await fetch(
+    `${Base_URL}/products?category=${encodeURIComponent(slug)}`
+  );
+
+  if (!res.ok) {
+    throw new Error("Category products fetch করতে সমস্যা হয়েছে");
+  }
+
+  return res.json();
 }
