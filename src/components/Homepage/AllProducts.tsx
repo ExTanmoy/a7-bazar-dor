@@ -1,5 +1,5 @@
 import { BazarDorProduct } from "@/types/bazardor";
-import ProductCard from "../UI/ProductCard";
+import SortingProducts from "../SortingProducts";
 
 const AllProducts = ({ products }: { products: BazarDorProduct[] }) => {
   return (
@@ -9,11 +9,8 @@ const AllProducts = ({ products }: { products: BazarDorProduct[] }) => {
         <h2 className="text-xl font-bold">সব পণ্য ({products.length})</h2>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
-        {products.map((product: BazarDorProduct) => (
-          <ProductCard key={product.id} product={product}></ProductCard>
-        ))}
-      </div>
+      <SortingProducts products={products}></SortingProducts>
+
     </section>
   );
 };

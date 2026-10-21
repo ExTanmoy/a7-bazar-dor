@@ -1,8 +1,7 @@
 import { notFound } from "next/navigation";
 import { getCategoryBySlug, getProductsByCategory } from "@/lib/api";
-import ProductCard from "@/components/UI/ProductCard";
 import Link from "next/link";
-import { BazarDorProduct,  } from "@/types/bazardor";
+import SortingProducts from "@/components/SortingProducts";
 
 interface CategoryPageProps {
   params: Promise<{ slug: string }>;
@@ -47,24 +46,10 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
           </div>
         </div>
 
-        <div className="mb-5 flex items-center justify-between">
-          <h2 className="text-sm text-gray-500">মোট {products.length} টি পণ্য দেখানো হচ্ছে</h2>
-          <p className="text-sm text-gray-500">Sorting</p>
-        </div>
+        
+          <SortingProducts products={products}></SortingProducts>
 
-        {products.length > 0 ? (
-          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            {products.map((product : BazarDorProduct) => (
-              <ProductCard key={product.id} product={product} />
-            ))}
-          </div>
-        ) : (
-          <div className="rounded-xl border border-dashed border-gray-300 bg-white px-5 py-16 text-center">
-            <p className="text-gray-600">
-              এই ক্যাটাগরিতে কোনো পণ্য পাওয়া যায়নি।
-            </p>
-          </div>
-        )}
+        
       </div>
     </main>
   );
