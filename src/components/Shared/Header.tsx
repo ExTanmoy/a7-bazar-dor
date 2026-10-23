@@ -29,14 +29,14 @@ const Header = () => {
 
           <div className="flex items-center gap-2 font-sans">
             <a
-              href="#"
+              href="/signin"
               className="sm:px-5 py-1 sm:py-2.5 text-center text-xs rounded-lg sm:text-sm  sm:font-bold bg-gray-200 hover:bg-mauve-200 hover:scale-105 transition duration-200"
             >
               সাইন ইন
             </a>
 
             <a
-              href="#"
+              href="/signup"
               className="bg-[#05893e] text-white px-1 sm:px-5 py-1 sm:py-2.5 text-center text-xs rounded-lg sm:text-sm  sm:font-bold hover:bg-green-800 hover:-translate-y-0.5 transition duration-200 shadow-lg"
             >
               সাইন আপ
