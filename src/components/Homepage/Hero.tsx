@@ -3,8 +3,8 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <div className="w-full max-w-7xl mx-auto my-10 bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
-        <div className="flex flex-col md:flex-row items-center justify-between p-8 md:p-12 gap-10">
+    <div className="w-full max-w-7xl mx-auto my-10 lg:my-20 px-4 ">
+        <div className="flex flex-col md:flex-row items-center justify-between bg-white rounded-2xl shadow-sm border border-gray-200 p-8 md:p-12 gap-10">
           
           {/* Left Content Section */}
           <div className="flex-1 space-y-6">

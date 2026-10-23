@@ -13,7 +13,7 @@ type SortOption = "default" | "price-asc" | "price-desc";
 const SortingProducts = ({ products }: SortingProductsProps) => {
   const [sortOption, setSortOption] = useState<SortOption>("default");
 
-  // Sort helper — Workout প্রজেক্টের মতোই প্যাটার্ন
+
   const sortProducts = (items: BazarDorProduct[]) => {
     const result = [...items];
 
@@ -30,11 +30,11 @@ const SortingProducts = ({ products }: SortingProductsProps) => {
 
   return (
     <section>
-      <div className="mb-6 flex items-center justify-between gap-4">
+      <div className="mb-2 flex items-center justify-between gap-4">
         <h2 className="text-sm  text-gray-500">মোট {products.length} টি পণ্য দেখানো হচ্ছে</h2>
 
         <label className="fieldset flex items-center">
-          <span className="text-sm text-gray-600">সাজান</span>
+          <span className="text-sm text-gray-600 hidden sm:block">সাজান</span>
           <select
             value={sortOption}
             onChange={(event) =>

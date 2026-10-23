@@ -8,7 +8,7 @@ const PriceFallers = ({ products }: { products: BazarDorProduct[] }) => {
     .slice(0, 6);
 
   return (
-    <section className=" max-w-7xl mx-auto my-6 px-4">
+    <section className=" max-w-7xl mx-auto my-10 px-4">
       <div className="flex items-center gap-2 mb-4 text-xl font-bold">
         <span className="text-green-700">▼</span>
         <h2>আজ দাম কমেছে ({fallers.length})</h2>

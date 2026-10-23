@@ -1,3 +1,5 @@
+import { BazarDorProduct } from "@/types/bazardor";
+
 const Base_URL = "https://openapi.programming-hero.com/api/bazardor";
 
 // 1.  NavLinks by fetching categories
@@ -43,3 +45,9 @@ export const getProductsByCategory = async (slug: string) => {
 
   return res.json();
 }
+
+// 5. fetch single product by slug
+export const getProductBySlug = async (slug: string): Promise<BazarDorProduct | null> => {
+  const products: BazarDorProduct[] = await getProducts();
+  return products.find((p) => p.slug === slug) ?? null;
+};

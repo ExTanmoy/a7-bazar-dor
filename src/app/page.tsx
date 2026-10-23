@@ -4,7 +4,7 @@ export const dynamic = 'force-dynamic';
 
 export default function Home() {
   return (
-    <div>
+    <div className="bg-[#f0f5f0]">
       <Homepage></Homepage>
     </div>
   );

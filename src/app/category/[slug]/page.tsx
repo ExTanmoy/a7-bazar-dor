@@ -19,21 +19,22 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
   const products = await getProductsByCategory(slug);
 
   return (
-    <main className="min-h-screen bg-gray-50 px-4 py-8 md:px-8">
+    <main className="min-h-screen bg-[#f0f5f0] px-4 py-6 md:px-8">
       <div className="mx-auto max-w-7xl">
         <div className="mb-8">
-          <div className="mb-3 text-sm text-gray-500 font-semibold">
-            <Link href={'/'} className="hover:text-green-600">
-              <span>হোম</span>
-            </Link>
-            <span className="mx-2">/</span>
-            <Link href={`/category/${category.slug}`} className="hover:text-green-600">
-              <span>{category.nameBn}</span>
-            </Link>
-            
+          
+          {/* 1. Breadcrumb */}
+          <div className="breadcrumbs mb-5 text-xs text-gray-600">
+            <ul>
+              <li>
+                <Link href="/">হোম</Link>
+              </li>
+
+              <li className="font-medium text-gray-800">{category.nameBn}</li>
+            </ul>
           </div>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 bg-white p-5 border border-gray-200 rounded-2xl">
             <span className="text-4xl">{category.icon}</span>
             <div>
               <h1 className="text-2xl font-bold text-gray-900 md:text-3xl">
@@ -46,10 +47,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
           </div>
         </div>
 
-        
-          <SortingProducts products={products}></SortingProducts>
-
-        
+        <SortingProducts products={products}></SortingProducts>
       </div>
     </main>
   );

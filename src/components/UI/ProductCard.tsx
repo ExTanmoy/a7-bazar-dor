@@ -7,10 +7,10 @@ const ProductCard = ({ product }: { product: BazarDorProduct }) => {
 
   return (
     <Link 
-        href={`products/${product.slug}`}
-        className="group border border-base-300 rounded-2xl  transition duration-200 hover:translate-y-0.5 hover:border-green-300 hover:shadow-2xl"
+        href={`/product/${product.slug}`}
+        className="group bg-white border border-gray-200 rounded-2xl  transition duration-200 hover:translate-y-0.5 overflow-hidden hover:border-green-300 hover:shadow-2xl"
     >
-      <div className="card w-full max-w-md p-4">
+      <div className="card w-full max-w-md p-4 ">
         {/* Top Section: Icon & Title */}
         <div className="flex items-center gap-3 mb-4">
           <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-orange-50">

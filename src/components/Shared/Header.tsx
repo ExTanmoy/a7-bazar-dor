@@ -2,10 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import NavLinks from "./NavLinks";
 import { date } from "@/lib/utils";
+import Marquee from "./Marquee";
 
 const Header = () => {
   return (
-    <header className="border-b border-slate-200">
+    <header className="sticky top-0 z-10 border-b border-gray-200 bg-white">
       {/* Upper section (logo, Signing) */}
       <section className="py-3 border-b border-slate-100">
         <div className="max-w-7xl mx-auto flex justify-between px-4">
@@ -20,7 +21,7 @@ const Header = () => {
                 ></Image>
               </span>
               <div>
-                <h2 className="text-xl font-bold">বাজার দর</h2>
+                <h2 className="text-sm sm:text-xl font-bold">বাজার দর</h2>
                 <p className=" text-xs text-slate-500">{date}</p>
               </div>
             </div>
@@ -29,14 +30,14 @@ const Header = () => {
           <div className="flex items-center gap-2 font-sans">
             <a
               href="#"
-              className="px-5 py-2.5 rounded-lg text-sm font-bold hover:bg-mauve-200 hover:scale-105 transition-all duration-200"
+              className="sm:px-5 py-1 sm:py-2.5 text-center text-xs rounded-lg sm:text-sm  sm:font-bold bg-gray-200 hover:bg-mauve-200 hover:scale-105 transition duration-200"
             >
               সাইন ইন
             </a>
 
             <a
               href="#"
-              className="bg-[#05893e] text-white px-5 py-2.5 rounded-lg text-sm font-bold hover:bg-green-800 hover:-translate-y-0.5 transition-all duration-200 shadow-lg"
+              className="bg-[#05893e] text-white px-1 sm:px-5 py-1 sm:py-2.5 text-center text-xs rounded-lg sm:text-sm  sm:font-bold hover:bg-green-800 hover:-translate-y-0.5 transition duration-200 shadow-lg"
             >
               সাইন আপ
             </a>
@@ -45,8 +46,9 @@ const Header = () => {
       </section>
 
       {/* Navlinks (Category) */}
-      <section className="py-1">
+      <section>
         <NavLinks></NavLinks>
+        <Marquee></Marquee>
       </section>
     </header>
   );
