@@ -11,7 +11,7 @@ const CategoryLink = ({ category }: { category: Category }) => {
   return (
     <Link
       href={`/category/${category.slug}`}
-      className={`flex gap-1.5 text-sm font-bold rounded-xl px-2 sm:px-4 py-2 transition-all duration-200 ${
+      className={`flex gap-1 text-sm font-bold rounded-xl px-2 sm:px-3 py-1.5 transition-all duration-200 bg-amber-50 ${
         isActive ? 'bg-green-700 text-white' : 'hover:bg-mauve-200 hover:scale-105'
       }`}
     >

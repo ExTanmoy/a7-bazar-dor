@@ -8,7 +8,7 @@ import "react-marquee-text/dist/styles.css";
 const Marquee = async () => {
   const products: BazarDorProduct[] = await getProducts();
   return (
-    <div className="border-t border-gray-200">
+    <div className="border-t border-gray-200 bg-purple-50">
       <MarqueeText direction="right" duration={20} pauseOnHover>
         <div>
           {products.map((scroller: BazarDorProduct) => (
